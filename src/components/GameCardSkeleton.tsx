@@ -6,7 +6,6 @@ function GameCardSkeleton() {
       <Skeleton height="200px" />
       <CardBody>
         <SkeletonText />
-        <Heading>Skeleton</Heading>
       </CardBody>
     </Card>
   );
