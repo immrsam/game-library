@@ -28,7 +28,9 @@ function useGames() {
 
   useEffect(() => {
     const controller = new AbortController();
+    
     setLoading(true);
+    
     apiClient
       .get<FetchGamesResponse>("/games", {signal: controller.signal})
       .then((res) => {
@@ -37,8 +39,9 @@ function useGames() {
       })
       .catch((err) => {
         if(err instanceof CanceledError) return;
-        setError(err.message)});
+        setError(err.message)
         setLoading(false);
+      });
       return () => controller.abort();
   }, []);
 
