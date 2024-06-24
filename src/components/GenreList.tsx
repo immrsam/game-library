@@ -24,7 +24,6 @@ function GenreList({ onSelectGenre, selectedGenre }: Props) {
               fontSize="lg"
               onClick={() => onSelectGenre(genre)}
               fontWeight={genre.id === selectedGenre?.id ? "700" : "400"}
-              color={genre.id === selectedGenre?.id ? "white" : "gray.400"}
             >
               {genre.name === "Massively Multiplayer" ? "MMO" : genre.name}
             </Button>
